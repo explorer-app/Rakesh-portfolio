@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <!-- begin SEO -->
+    <title>Sankhla's Research Lab</title>
+    <meta property="og:locale" content="en-US">
+    <meta property="og:site_name" content="Your Name / Site Title">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <meta property="og:title"
+        content="Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites">
+    <link rel="canonical" href="./">
+    <meta property="og:url" content="./">
+    <script type="application/ld+json">
+            {
+                "@context": "http://schema.org",
+                "@type": "Person",
+                "name": "Rakesh Thakur",
+                "url": ".",
+                "sameAs": null
+            }</script>
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+    </script>
+    <!-- For all browsers -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="./assets/css/academicons.css" />
+    <!-- Support for MatJax -->
+    <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- end custom head snippets -->
+    <style>
+        .album {
+            display: flex;
+            justify-content: center;
+            z-index: -10;
+            width: 100%;
+        }
+
+        .carousel {
+            position: relative;
+            width: 90%;
+            z-index: -10;
+            max-width: 800px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .carousel-track {
+            z-index: -10;
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            z-index: -10;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .carousel-slide img {
+            max-width: 100%;
+            z-index: -10;
+            max-height: 450px;
+            object-fit: contain;
+            z-index: inherit;
+        }
+
+        /* Pagination Dots */
+        .carousel-dots {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .dot.active {
+            background-color: white;
+        }
+
+        @media (max-width: 768px) {
+            .carousel-slide img {
+                max-height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <script src="./assets/js/script.js" defer></script>
+    <button id="theme-toggle">🌙</button>
+    <div class="masthead">
+        <div class="masthead__inner-wrap">
+            <div class="masthead__menu">
+                <nav id="site-nav" class="greedy-nav"> <button>
+                        <div class="navicon"></div>
+                    </button>
+                    <ul class="visible-links">
+                        <li class="masthead__menu-item masthead__menu-item--lg">
+                            <a href="./"><img src="./images/logo.png" style="height: 30px; width: 30px;" alt="Sankhla's Research Lab">Sankhla's Research Lab</a>
+                        </li>
+                        <li class="masthead__menu-item">
+                            <a href="./about-me/">About Me</a>
+                        </li>
+                        <li class="masthead__menu-item">
+                            <a href="./patent/">Patents</a>
+                        </li>
+                        <li class="masthead__menu-item">
+                            <a href="./publications/">Publications</a>
+                        </li>
+                        <li class="masthead__menu-item">
+                            <a href="./talks/">Talks</a>
+                        </li>
+                        <li class="masthead__menu-item">
+                            <a href="./project-experiment/">Project & Experiment</a>
+                        </li>
+                        <li class="masthead__menu-item">
+                            <a href="./books/">Books</a>
+                        </li>
+                        <li class="masthead__menu-item">
+                            <a href="./teams/">Team</a>
+                        </li>
+                    </ul>
+                    <ul class="hidden-links hidden"></ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div id="main" role="main">
+        <div class="sidebar sticky">
+            <div itemscope itemtype="http://schema.org/Person">
+                <div class="author__avatar">
+                    <img src="./images/profile.jpeg" class="author__avatar" alt="Rakesh Thakur">
+                </div>
+                <div class="author__content">
+                    <h3 class="author__name">Rakesh Thakur</h3>
+                    <!-- <p class="author__bio">Expert in forensic science, specializing in toxicology, nanotechnology, and
+                        fingerprint analysis with 170+ articles.</p> -->
+                    <p class="author__bio">Assistant Professor, CSE, Chandigarh University</p>
+                </div>
+                <div class="author__urls-wrapper">
+                    <button class="btn btn--inverse">Follow</button>
+                    <ul class="author__urls social-icons">
+                        <li class="author__desktop">
+                            <i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>
+                            Chandigarh University
+                        </li>
+                        <!-- <li style="display: flex;">
+                            <a href="mailto:mahi4n6@gmail.com">
+                                <i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i> Email 1</a>|
+                            &nbsp;<a href="mailto:mahipal4n6@gmail.com">Email 2 </a>
+                        </li> -->
+                        <li>
+                            <a href="mailto:rakesh.thakur@iitgn.ac.in">
+                                <i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i> Email
+                            </a>
+                        </li>
+                        <li>
+                            <a href="www.linkedin.com/in/rakesh-thakur-Aug19">
+                                <i class="fab fa-fw fa-linkedin icon-pad-right" aria-hidden="true"></i>
+                                Linkedin
+                            </a>
+                        </li>
+                        <!-- <li>
+                            <a href="https://scholar.google.co.in/citations?user=JR9Y0SUAAAAJ&hl=en">
+                                <i class="ai ai-google-scholar icon-pad-right"></i>
+                                Google Scholar
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://orcid.org/0000-0002-7361-3786">
+                                <i class="ai ai-orcid ai-fw icon-pad-right"></i>
+                                ORCID
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.scopus.com/authid/detail.uri?authorId=57219964786">
+                                <i class="ai ai-pubmed ai-fw icon-pad-right"></i>
+                                SCOPUS
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.researchgate.net/profile/Mahipal_Singh_Sankhla">
+                                <i aria-hidden="true">RG</i>&nbsp
+                                Research Gate
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://vidwan.inflibnet.ac.in/profile/574338/NTc0MzM4">
+                                <i class="uil uil-lightbulb icon-pad-right" aria-hidden="true"></i>
+                                VIDWAN
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.webofscience.com/wos/author/record/AAZ-4331-2020">
+                                <i class="uil uil-triangle icon-pad-right" aria-hidden="true"></i>
+                                CLARIVATE ANALYTICS
+                            </a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+            <meta itemprop="headline" content="Article Published on Website / Newspaper">
+            <div class="page__inner-wrap">
+
+                <div class="album">
+                    <div class="carousel">
+                        <div class="carousel-track">
+                            <div class="carousel-slide">
+                                <img src="./images/pic1.jpeg" alt="Slide 1" style="width: 100%;">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="./images/pic2.jpeg" alt="Slide 2" style="width: 100%;">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="./images/pic3.jpeg" alt="Slide 3" style="width: 100%;">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="./images/pic4.jpeg" alt="Slide 4" style="width: 100%;">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="./images/pic5.jpeg" alt="Slide 5" style="width: 100%;">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="./images/pic6.jpeg" alt="Slide 6" style="width: 100%;">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="./images/pic7.jpeg" alt="Slide 7" style="width: 100%;">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="./images/pic8.jpeg" alt="Slide 8" style="width: 100%;">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="./images/pic9.jpeg" alt="Slide 9" style="width: 100%;">
+                            </div>
+                        </div>
+
+                        <div class="carousel-dots">
+                            <div class="dot active"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <br><br>
+
+                <header>
+                    <h1 class="page__title" itemprop="headline">Article Published on Website / Newspaper</h1>
+                </header>
+                <section class="page__content" itemprop="text">
+                    <ul>
+                        <li><b><u>Mahipal Singh Sankhla</u>, “Microplastics Everywhere: A Growing Threat to Human
+                                Health”</b> <span class="comment__date">Published on - 24 September 2024</span>, <a
+                                href="https://www.achieverstalk.in/environmental-talk/microplastics-everywhere-a-growingthreat-to-human-health/?__im-lskwnodq=14595776266623251818"
+                                target="_blank">view here</a></li>
+                        <li>Anubhav Singh & <b><u>Mahipal Singh Sankhla</u>, “Rumour’s On Corona: Are You Doing It
+                                Right!”</b>, <span class="comment__date">Published on - 08 April 2020</span> <a
+                                href="https://legaldesire.com/rumours-on-corona-are-you-doing-it-right/"
+                                target="_blank">view here</a></li>
+                        <li><b><u>Mahipal Singh Sankhla</u></b>, Shriyash Mohril, Lokesh Vaishanav, <b>“World
+                                Crisis:
+                                Increasing Depression During Work from Home in Covid-19 Pandemic”</b><span
+                                class="comment__date">Published on - 15 April 2020</span> <a
+                                href="https://legaldesire.com/world-crisisincreasing-depression-during-work-from-home-in-covid-19-pandemic/"
+                                target="_blank">view here</a> </li>
+                        <li><b><u>Mahipal Singh Sankhla</u>, “Medico-Legal Postmortem/Autopsy in India: Purpose &
+                                Benefit”</b>, <span class="comment__date">Published on 14 July 2017</span> <a
+                                href="https://legaldesire.com/medico-legal-postmortemautopsy-in-india-purpose-benefits/"
+                                target="_blank">view here</a></li>
+                    </ul>
+                    <br>
+                    <h1 id="editorial-board-member-&-reviewer">Editorial Board Member</h1>
+                    <ul>
+                        <li><b>Guest Editor</b> of Special Issue of <b>Role of Nanoparticle Use in Forensics and
+                                Fingerprint Identification</b>,
+                            Current Materials Science, <b>(Bentham Science)</b></li>
+                        <li><b>Guest Editor</b> of Special Issue of <b>Advanced Nanotechnology in Forensic Science:
+                                Revolutionizing Fingerprint
+                                Identification and Crime Scene Analysis</b>, Current Nanoscience, <b>(Bentham
+                                Science)</b></li>
+                        <li><b>Guest Editor</b> of Special Issue of <b>Environmental Forensics: Linking Crime to
+                                Environmental Science</b>,
+                            Current Forensic Science, <b>(Bentham Science)</b></li>
+                        <li><b>Guest Editor</b> of Special Issue of <b>Nanotechnology for Safer and More Effective
+                                Environmental Remediation</b>,
+                            Current Materials Science, <b>(Bentham Science)</b></li>
+                        <li><b>Guest Editor</b> of Special Issue of <b>Nanotechnology: Enhancing Efficiency and
+                                Safety
+                                in Environmental Pollution
+                                Remediation</b>, Current Nanoscience, <b>(Bentham Science)</b></li>
+                        <li><b>Guest Editor</b> of <b>International Journal of Materials Today Proceedings</b> for
+                            National Conference on
+                            Environmental Toxicology: Impact on Human Health (Elsevier), 2022.</li>
+                        <li><b>Guest Editor</b> of <b>Environmental Science and Pollution Research</b> for National
+                            Conference on
+                            Environmental Toxicology: Impact on Human Health (Springer), 2022.</li>
+                    </ul>
+
+                    <h1 id="fellowship-member">Fellowship Member </h1>
+                    <ul>
+                        <li><b>Fellow Member of India School of Internet Governance (Insig2022)</b> at Hyderabad
+                            Chapter.</li>
+                        <!-- <li><b>“Best Young Researcher Award”</b> in IFCA Award & Summit 2021, Department of Forensic
+                            Science & CI, Legal Desire & Media Insights on 7 August 2021.</li>
+
+
+                        <li>Awarded Second Prize for Oral Research Paper Presentation in <b>“4th National Conference
+                                on
+                                Forensic Science & Cyber Threats: Countermeasure”</b> held on 30th Nov. - 1st Dec.
+                            2019.
+                        </li> -->
+
+
+                    </ul>
+                    <h1 id="awards-&-honors">Awards & Honor’s </h1>
+                    <ul>
+                        <li><b>“Forensic Research Excellence Award”</b>, in NFCI Summit and Award 2023, Dept. of
+                            Forensic Science & CI, Legal Desire & Insights & Dept. of Forensic Science, Vivekananda
+                            Global University at "21 January 2023.”</li>
+                        <li><b>“Forensic Research Excellence Award”</b>, in NFCI Summit and Award 2023, Dept. of
+                            Forensic Science & CI, Legal Desire & Insights & Dept. of Forensic Science, Vivekananda
+                            Global University at "21 January 2023.”</li>
+                        <li><b>“Best Young Researcher Award”</b> in IFCA Award & Summit 2021, Department of Forensic
+                            Science & CI, Legal Desire & Media Insights at "7 August 2021.”</li>
+                        <li><b>“Young Scientists Award”</b> for Best Paper Presentation in 2nd National Conference
+                            on
+                            Forensic Science and Criminalistics, Forensis Agora 2017.</li>
+                        <li>Awarded <b>“Junior Research Fellowship-JRF”</b>, DST-Funded Project in Department of
+                            Chemical Engineering at <b>“Malaviya National Institute of Technology- MNIT”</b>,
+                            Jaipur.
+                        </li>
+                        <li>Awarded <b>“Scholarship 300$ Online Certificate Course”</b> by True Forensic Science,
+                            USA.
+                        </li>
+                        <li>Awarded <b>“Excellence in Reviewing”</b> in International Journal for Innovative
+                            Research in
+                            Science & Technology (IJIRST).</li>
+                        <li>Awarded <b>“Excellence in Reviewing”</b> in Asian Journal of Advance Research & Reports.
+                        </li>
+                        <li>Awarded <b>“Certification of Appreciation”</b> for Hard Working in Legal Desire Media &
+                            Publication.</li>
+                    </ul>
+                    <h1 id="create-content--metadata">Organized Conference / Seminar / Workshop / Webinar / FDP</h1>
+                    <ul>
+                        <li>Coordinator of Online Workshop on <b>“Intellectual Property Awareness”</b> program under
+                            the
+                            mission of
+                            <b>National Intellectual Property Awareness Mission (NIPAM), Intellectual Property
+                                Office,
+                                Govt. of India</b>,
+                            held on 05 September 2023.
+                        </li>
+                        <li>Coordinator of Online Workshop on <b>“Intellectual Property Awareness”</b> program under
+                            the
+                            mission of
+                            <b>National Intellectual Property Awareness Mission (NIPAM), Intellectual Property
+                                Office,
+                                Govt. of India</b>,
+                            held on 02 May 2023.
+                        </li>
+                        <li>Organizing Secretary of <b>“National Forensic Science Summit and Award 2023”</b>, held
+                            on 21
+                            January 2023.</li>
+                        <li>Organizing Secretary of <b>“2nd International Conference on Recent and Development in
+                                Forensic Science,
+                                Forensic Gyan 2021”</b>, held on 10-11 October 2022.</li>
+                        <li>Joint Organizing Secretary of <b>“National Conference on Environmental Toxicology Impact
+                                on
+                                Human Health”</b>,
+                            held on 25-26 November 2021.</li>
+                        <li>Organizing Secretary of <b>“International Conference on Recent and Development in
+                                Forensic
+                                Science, Forensic Gyan 2021”</b>,
+                            held on 21-22 October 2021.</li>
+                        <li>Co-convener of <b>“International Conference on Research and Development in Forensic
+                                Science
+                                and Cyber Forensics”</b>,
+                            held on 21-22 May 2021.</li>
+                        <li>Co-convener of <b>“5 Days Faculty Development Programme on Pedagogy, Learning and
+                                Effective
+                                Use of Forensic Science in Criminal Investigation”</b>,
+                            held on 22-26 March 2021.</li>
+                        <li>Convener of <b>“International Conference on Wildlife Forensic, Its Laws &
+                                Conservation”</b>,
+                            held on 28-29 July 2020.</li>
+                        <li>Active Member of Organizing Committee in <b>“5 Days Faculty Development Programme (FDP)
+                                on
+                                Teaching Beyond Boundaries: Emerging Trends in Forensic Education”</b>,
+                            held on 16-20 June 2020.</li>
+                        <li>Active Member of Organizing Committee in <b>“International Forensic Science & Criminal
+                                Investigation Summit & Awards (IFCI2020)”</b>,
+                            held on 28-29 May 2020.</li>
+                        <li>Active Member of Organizing Committee in <b>How to Live with Covid-19</b>, held on 24
+                            May
+                            2020.</li>
+                        <li>Active Member of Organizing Committee in <b>Forensic Accounting: Emerging Trends in
+                                Forensic
+                                Science</b>,
+                            held on 5 June 2020.</li>
+                        <li>Active Member of Organizing Committee in <b>“Webinar on Basic Structure of Indian
+                                Constitution: Interesting & Rare Facts About Kesavananda Bharti V. State of
+                                Kerala”</b>,
+                            held on 17 May 2020.</li>
+                        <li>Active Member of Organizing Committee in <b>“2nd International Virtual Conference on
+                                Forensic Investigations: Stepping Stone for The Future Technologies &
+                                Advancements”</b>,
+                            held on 15 May 2020.</li>
+                        <li>Active Member of Organizing Committee in <b>“Digital & Mobile Forensic”</b>, held on 12
+                            May
+                            2020.</li>
+                        <li>Active Member of Organizing Committee in <b>“Webinar on Questioned Document
+                                Examination”</b>, held on 13 May 2020.</li>
+                        <li>Active Member of Organizing Committee in <b>“Legal Desire Virtual Summit 2020”</b>, held
+                            on
+                            2-3 May 2020.</li>
+                        <li>Active Member of Organizing Committee in <b>“Webinar on Stress & Time Management for
+                                Lawyers
+                                & Law Students”</b>,
+                            held on 26 April 2020.</li>
+                        <li>Active Member of Organizing Committee in <b>National Webinar on Cybersecurity Laws and
+                                Regulation: Discussing Road Map for India</b>,
+                            held on 26 April 2020.</li>
+                        <li>Active Member of Organizing Committee in <b>“International Virtual Conference on Role of
+                                Forensics in Criminal Investigation”</b>,
+                            held on 20 April 2020.</li>
+                        <li>Active Member of Organizing Committee in <b>“International Webinar on Role of Forensic
+                                Science in 21st Century”</b>,
+                            held on 10 April 2020.</li>
+                        <li>Active Member of Organizing Committee in <b>“Toxic Detective - Masterclass on
+                                Toxicology,
+                                Hands-On Training and Simulation Workshop”</b>,
+                            held on 4 February 2020.</li>
+                        <li>Active Member of Organizing Committee in <b>4th National Conference on Forensic Science
+                                &
+                                Cyber Threats: Countermeasure, Forensis Agora</b>, 2019.</li>
+                        <li>Active Member of Organizing Committee in <b>2nd International Conference on Medico-Legal
+                                Issues & Use of Forensic in Criminal Investigation</b>, 2019.</li>
+                        <li>Active Member of Organizing Committee in <b>“National One Day Workshop on Crime Scene
+                                Investigation”</b>, 2018.</li>
+                        <li>Active Member of Organizing Committee in <b>“International Conference on Medico-Legal
+                                Issues
+                                & Use of Forensic in Criminal Justice System: Challenges & Way Forward”</b>, 2018.
+                        </li>
+                        <li>Active Member of Organizing Committee in <b>3rd National Conference on Forensic Science
+                                and
+                                Criminalistics, Forensis Agora</b>, 2018.</li>
+                        <li>Active Member of Organizing Committee in <b>2nd National Conference on Emerging Trends
+                                in
+                                Applied Sciences</b>.</li>
+                        <li>Active Member of Organizing Committee in <b>National Legal Desire Summit & Award</b>,
+                            2018.
+                        </li>
+                        <li>Active Member of Organizing Committee in <b>Global Enviro Care Summit, By Unmukt
+                                Bharat</b>,
+                            2016.</li>
+                    </ul>
+                </section>
+                <footer class="page__meta"></footer>
+            </div>
+        </article>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const track = document.querySelector('.carousel-track');
+            const slides = Array.from(track.children);
+            const dotsNav = document.querySelector('.carousel-dots');
+            const dots = Array.from(dotsNav.children);
+            let currentIndex = 0;
+            let autoSlideInterval;
+
+            // Adjust the track position based on the current slide
+            function updateSlidePosition() {
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+                updateDots();
+            }
+
+            // Update active dot
+            function updateDots() {
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentIndex);
+                });
+            }
+
+            // Move to the next slide
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % slides.length;
+                updateSlidePosition();
+            }
+
+            // Start the auto-slide interval
+            function startAutoSlide() {
+                console.log('Starting auto-slide...');
+                autoSlideInterval = setInterval(nextSlide, 3000);
+            }
+
+            // Stop the auto-slide interval
+            function stopAutoSlide() {
+                console.log('Stopping auto-slide...');
+                clearInterval(autoSlideInterval);
+            }
+
+            // Start the auto-slide when the page loads
+            startAutoSlide();
+
+            // Pause auto-slide on mouse enter (hover)
+            track.addEventListener('mouseenter', () => {
+                console.log('Mouse entered: Pausing auto-slide');
+                stopAutoSlide();
+            });
+
+            // Resume auto-slide on mouse leave
+            track.addEventListener('mouseleave', () => {
+                console.log('Mouse left: Resuming auto-slide');
+                startAutoSlide();
+            });
+
+            // Allow users to click on dots to navigate to specific slides
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    console.log(`Dot ${index + 1} clicked`);
+                    currentIndex = index;
+                    updateSlidePosition();
+                    stopAutoSlide(); // Optional: Stop auto-slide on manual navigation
+                });
+            });
+        });
+
+    </script>
+    <script src="./assets/js/main.min.js"></script>
+</body>
+
+</html>
