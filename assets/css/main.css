@@ -12,7 +12,7 @@ a:focus {
 
 html {
     box-sizing: border-box;
-    background-color: #ffffff;
+    background-color: #e7e0ac;
     font-size: 16px;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%
@@ -24,30 +24,8 @@ html {
     }
 }
 
-body.dark{
-    --text-color : white;
-    background-color: #343333;
-}
-
 body {
-    margin: 0;
-    transition: background-color 0.3s, color 0.3s;
-    min-height: 100vh;
-
-}
-
-#theme-toggle{
-    position: fixed;
-    z-index: 999;
-    right: 30px;
-    background: none;
-    bottom: 30px;
-    border: none;
-    font-size: xx-large;
-}
-
-:root {
-    --text-color : #494e52;
+    margin: 0
 }
 
 ::-moz-selection {
@@ -75,8 +53,7 @@ audio:not([controls]) {
 }
 
 a {
-    color: #0095ff;
-    font-weight: bold;
+    color: #ff0000
 }
 
 a:hover,a:active {
@@ -159,8 +136,8 @@ body {
     margin: 0;
     padding: 70px 0 0;
     padding-bottom: 9em;
-    color: var(--text-color);
-    background-color: #ffffff;
+    color: #494e52;
+    background-color: #e7e0ac;
     font-family: 'Times New Roman', Times, serif,-apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
     line-height: 1.5
 }
@@ -211,7 +188,7 @@ p {
 
 u,ins {
     text-decoration: none;
-    border-bottom: 1px solid var(--text-color)
+    border-bottom: 1px solid #494e52
 }
 
 u a,ins a {
@@ -230,7 +207,7 @@ p,pre,blockquote,ul,ol,dl,figure,table,fieldset {
 abbr[title],abbr[data-original-title] {
     text-decoration: none;
     cursor: help;
-    border-bottom: 1px dotted var(--text-color)
+    border-bottom: 1px dotted #494e52
 }
 
 blockquote {
@@ -281,7 +258,7 @@ hr {
     display: block;
     margin: 1em 0;
     border: 0;
-    border-top: 1px solid #343333;
+    border-top: 1px solid #f2f3f3
 }
 
 ul li,ol li {
@@ -1072,7 +1049,7 @@ tr,td,th {
 }
 
 .notice--primary a:hover {
-    color: var(--text-color)
+    color: #494e52
 }
 
 .notice--primary code {
@@ -1269,7 +1246,7 @@ tr,td,th {
 
 .masthead {
     position: fixed;
-    background: #404040;
+    background: #861212;
     border-bottom: 1px solid #f2f3f3;
     height: 70px;
     top: 0;
@@ -1521,7 +1498,7 @@ tr,td,th {
 .greedy-nav {
     position: relative;
     min-width: 250px;
-    background: #404040
+    background: #861212
 }
 
 .greedy-nav a {
@@ -1534,7 +1511,7 @@ tr,td,th {
 }
 
 .greedy-nav a:hover {
-    color: #95e1dc;
+    color: #e7e0ac;
 }
 
 .greedy-nav button {
@@ -1544,8 +1521,7 @@ tr,td,th {
     padding: 0 0.5rem;
     border: 0;
     outline: none;
-    background-color: #000000;
-    border-radius: 10px;
+    background-color: #790909;
     color: #fff;
     cursor: pointer;
     z-index: 100
@@ -1583,7 +1559,7 @@ tr,td,th {
     left: 0;
     bottom: 0;
     height: 4px;
-    background: #ace7e6;
+    background: #e7e0ac;
     width: 100%;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
@@ -1604,9 +1580,9 @@ tr,td,th {
     right: 0;
     margin-top: 15px;
     padding: 5px;
-    border: 1px solid #404040;
+    border: 1px solid #861212;
     border-radius: 4px;
-    background: #404040;
+    background: #861212;
     box-shadow: 0 0 10px rgba(0,0,0,0.25)
 }
 
@@ -1642,7 +1618,7 @@ tr,td,th {
     width: 0;
     border-style: solid;
     border-width: 0 10px 10px;
-    border-color: #404040 transparent;
+    border-color: #861212 transparent;
     display: block;
     z-index: 1
 }
@@ -2193,7 +2169,7 @@ form legend {
     margin-bottom: 10px;
     *margin-left: -7px;
     padding: 0;
-    color: var(--text-color);
+    color: #494e52;
     border: 0;
     border-bottom: 1px solid #ccc;
     white-space: normal
@@ -2226,7 +2202,7 @@ input,button,select,textarea {
 label {
     display: block;
     margin-bottom: 0.25em;
-    color: var(--text-color);
+    color: #494e52;
     cursor: pointer
 }
 
@@ -2243,7 +2219,7 @@ input,textarea,select {
     width: 100%;
     padding: 0.25em;
     margin-bottom: 0.5em;
-    color: var(--text-color);
+    color: #494e52;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -3442,9 +3418,9 @@ input[type="file"]:focus,input[type="radio"]:focus,input[type="checkbox"]:focus,
     margin-top: 15px;
     padding: 10px;
     list-style-type: none;
-    border: 1px solid #dfdfde;
+    border: 1px solid #feffb2;
     border-radius: 4px;
-    background: #dfdfde;
+    background: #feffb2;
     z-index: -1;
     box-shadow: 0 0 10px rgba(0,0,0,0.25);
     cursor: default
@@ -3490,7 +3466,7 @@ input[type="file"]:focus,input[type="radio"]:focus,input[type="checkbox"]:focus,
     width: 0;
     border-style: solid;
     border-width: 0 10px 10px;
-    border-color: #aeaeac transparent;
+    border-color: #feffb2 transparent;
     z-index: 1
 }
 
