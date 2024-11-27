@@ -80,11 +80,10 @@
         display: none;
         position: fixed;
         top: 20vh;
-        left: 12vh;
+        left: 15vh;
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.8);
-        z-index: 10;
         align-items: center;
         justify-content: center;
         overflow: hidden;
@@ -93,8 +92,8 @@
 
     .modal img {
         max-width: 100%;
-        max-height: 80vh;
-        object-fit: contain;
+        max-height: 100vh;
+        object-fit:contain ;
         border-radius: 8px;
     }
 
@@ -117,12 +116,23 @@
         text-align: center;
         font-weight: bold;
     }
+
+    @media (max-width: 550px){
+        .modal{
+            width: 110%;
+        }
+    }
 </style>
 
 
 
 
 <body>
+    <script src="../script.js" defer></script>
+    <div class="slider-container">
+        <input type="checkbox" id="slider" class="slider-input">
+        <label for="slider" class="slider-label"></label>
+    </div>
     <!--[if lt IE 9]><div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
     <div class="masthead">
         <div class="masthead__inner-wrap">
