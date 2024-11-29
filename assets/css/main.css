@@ -14,7 +14,7 @@ a:focus {
 
 :root {
     --primary-color: #10131e;
-    --panel-color: #f7f7f7;
+    --panel-color: #ffffff;
     --text-color: #494e52;
 }
 
@@ -109,7 +109,7 @@ img {
     width: auto\9;
     height: auto;
     vertical-align: middle;
-    border: 3px solid;
+    /* border: 3px solid; */
     -ms-interpolation-mode: bicubic
 }
 
@@ -129,8 +129,8 @@ textarea {
 
 button,
 input {
-    *overflow: visible;
-    line-height: normal
+    overflow: visible;
+    line-height: normal;
 }
 
 button::-moz-focus-inner,
@@ -2328,7 +2328,7 @@ form legend {
     display: block;
     width: 100%;
     margin-bottom: 10px;
-    *margin-left: -7px;
+    margin-left: -7px;
     padding: 0;
     color: var(--text-color);
     border: 0;
@@ -2356,7 +2356,7 @@ button,
 select,
 textarea {
     vertical-align: baseline;
-    *vertical-align: middle
+    vertical-align: middle
 }
 
 input,
@@ -2419,7 +2419,7 @@ input[type="radio"] {
     height: auto;
     padding: 0;
     margin: 3px 0;
-    *margin-top: 0;
+    margin-top: 0;
     line-height: normal;
     cursor: pointer;
     border-radius: 0;
@@ -2430,8 +2430,8 @@ input[type="checkbox"],
 input[type="radio"] {
     box-sizing: border-box;
     padding: 0;
-    *width: 13px;
-    *height: 13px
+    width: 13px;
+    height: 13px
 }
 
 input[type="image"] {
@@ -2455,12 +2455,12 @@ input[type="submit"] {
     width: auto;
     height: auto;
     cursor: pointer;
-    *overflow: visible
+    overflow: visible
 }
 
 select,
 input[type="file"] {
-    *margin-top: 4px
+    margin-top: 4px
 }
 
 select {
@@ -14691,4 +14691,58 @@ screen and (max-height: 300px) {
 .slider-input:checked+.slider-label::before {
     transform: translateX(26px);
     /* Move the slider */
+}
+/* Container styling */
+.ralated-image {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: cursive ;
+    gap: 20px; /* Space between cards */
+    justify-content: center; /* Center align cards */
+    padding: 20px; /* Space around the container */
+}
+
+/* Card styling */
+.ralated-image .card {
+    position: relative;
+    width: 300px; /* Fixed card width */
+    border: 1px solid #ddd; /* Border for card */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Clip overflow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+}
+
+/* Hover effect */
+.ralated-image .card:hover {
+    transform: translateY(-10px); /* Lift the card */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Image styling */
+.ralated-image .card img {
+    width: 100%; /* Ensure images fit card width */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+}
+
+/* Info section styling */
+.ralated-image .card .info {
+    padding: 15px;
+    background-color: #fff; /* Background for text */
+    text-align: center; /* Center text */
+    color: #333; /* Text color */
+    font-size: 16px; /* Font size */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .ralated-image {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center;
+    }
+
+    .ralated-image .card {
+        width: 90%; /* Adjust card width */
+    }
 }

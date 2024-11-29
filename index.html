@@ -9,8 +9,7 @@
     <meta property="og:site_name" content="Your Name / Site Title">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
-    <meta property="og:title"
-        content="Rakesh Thakur">
+    <meta property="og:title" content="Rakesh Thakur">
     <link rel="canonical" href="./">
     <meta property="og:url" content="./">
     <script type="application/ld+json">
@@ -109,17 +108,12 @@
 </head>
 
 <body>
-    <script src="../script.js" defer></script>
-    <div class="slider-container">
-        <input type="checkbox" id="slider" class="slider-input">
-        <label for="slider" class="slider-label"></label>
-    </div>
     <script src="./script.js" defer></script>
     <div class="slider-container">
         <input type="checkbox" id="slider" class="slider-input">
         <label for="slider" class="slider-label"></label>
     </div>
-    
+
     <div class="masthead">
         <div class="masthead__inner-wrap">
             <div class="masthead__menu">
@@ -302,7 +296,29 @@
                             <!-- <p>CGPA: <b>8.79</b>/10</p> -->
                         </li>
                     </ul>
-
+                    <div class="ralated-image">
+                        <div class="card">
+                            <img src="./gif/gif1.png" alt="">
+                            <div class="info">
+                                Biotech + NLP, ML , AI: Applying language models to analyze ,and interpret biological
+                                datasets.
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="./gif/gif2.gif" alt="">
+                            <div class="info">
+                                AI (Artificial Intelligence): Simulating human intelligence in machines for tasks like
+                                problem-solving and decision-making.
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="./gif/gif3.gif" alt="">
+                            <div class="info">
+                                LLMs (Large Language Models): Models like GPTu process and generate human-like
+                                text using deep learning techniques. They can be used for tasks like text summarization,
+                            </div>
+                        </div>
+                    </div>
                 </section>
                 <footer class="page__meta"></footer>
             </div>
@@ -338,7 +354,6 @@
 
             // Start the auto-slide interval
             function startAutoSlide() {
-                console.log('Starting auto-slide...');
                 autoSlideInterval = setInterval(nextSlide, 3000);
             }
 
